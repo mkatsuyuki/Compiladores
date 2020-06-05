@@ -32,6 +32,14 @@ while(controle < tamanho-1){
 
 }
 */
+fseek(erros, 0, SEEK_END);
+tamanho = ftell(erros);
+
+if(tamanho <= 1){
+    fprintf(erros,"Compilado com sucesso!\n");
+}
+    
+    
 fclose(F);
 fclose(erros);
 
