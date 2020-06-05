@@ -612,7 +612,7 @@ void ProcedimentoDC(char *buffer,int *controle, int *contador,FILE * F, char *pa
             Classe(buffer,controle, contador,F,palavra,tamanho,erros,classe,linha);// consome 
         }
         else{
-	    fprintf(erros,"Erro Sintatico: %s Precisavamos de : ! Linha: %d\n", palavra,*linha);
+	    fprintf(erros,"Erro Sintatico: %s Precisavamos de ; ! Linha: %d\n", palavra,*linha);
             while((strcmp(classe,"procedure") != 0)& (strcmp(classe,"begin") != 0) & (strcmp(classe,"Fim") != 0)){
 		Classe(buffer,controle, contador,F,palavra,tamanho,erros,classe,linha);	
             }
